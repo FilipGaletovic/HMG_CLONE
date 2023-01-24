@@ -1,0 +1,13 @@
+.logo-container{
+    width: 100%;
+    background: var(--light-gray-gradient);
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.logoImg{
+    margin-left: 100px;
+    width: 350px;
+    cursor: pointer;
+    height: auto;
+}

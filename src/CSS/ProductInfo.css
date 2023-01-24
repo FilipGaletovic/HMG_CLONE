@@ -1,0 +1,61 @@
+.Product_container{
+    width: 350px;
+    height: 320px;
+    margin-top: 40px;
+    background: var(--light-gray);
+    position: relative;
+    transition-duration: .3s;
+}
+.Product_container:hover{
+    background: #fff;
+    transform:scale(1.005);
+}
+.ProductImg{
+    width: 350px;
+    right: 0px;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+}
+.Product_container>h2{
+    position: absolute;
+    text-decoration-style: none;
+    color: #000;
+    font-size: 1.7rem;
+    bottom: 25px;
+    left: 25px;
+}
+.ProductBtn{
+    position: absolute;
+    bottom: 0px;
+    width: 250px;
+    height: 40px;
+    background: linear-gradient(to right, var(--blue-main) 50%, var(--gray-button) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .15s ease-out;
+    cursor: pointer;
+    border: none;
+    left: 0px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 20px;
+}
+.ProductBtn:hover{
+    color: #fff;
+    background-position: left bottom;
+   
+}
+
+.ProductBtn::after{
+    content: '';
+    position:absolute;
+    width: 0px;
+    height: 0px;
+    right: -19px;
+    top: 0;
+    border-left: 20px solid var(--blue-main);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}

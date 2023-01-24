@@ -1,0 +1,26 @@
+:root {
+  
+    --gray-button: #979696;
+    --dark-gray: rgb(53, 52, 52);
+    --gray: #6d6d6d;
+    --gray-light-gradient: linear-gradient(135deg, #535353 45%, #bbbbbb 100%);
+    --light-gray: rgb(201, 201, 201);
+    --ultra-light-gray: rgb(221, 221, 221);
+    --light-gray-gradient: linear-gradient(0deg, rgba(201,201,201,1) 0%, rgba(255,255,255,1) 100%);
+    --blue-main: #2a4863;
+    --blue-main-transp: #26425ae5;
+    --yellow: 
+  
+    
+    
+    
+    
+    --black-gradient: linear-gradient(
+      144.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%
+    );
+  
+    --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  }
