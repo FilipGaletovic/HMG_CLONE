@@ -1,40 +1,35 @@
-.ContentContainer>form{
-    width: 400px;
-    height: auto;
-    display: grid;
-    grid-template-columns:repeat(2, 500px);
-    grid-template-rows: repeat(4, 40px);
-    row-gap: 10px;
-    top: 150px;
-    left: -70px;
-    position: absolute;
+.registerCon{
+  height: 760px;
 }
+
+.registerConCon{
+  height: 730px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+  .ContentContainer>form{
+      height: auto;
+      background: none;
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      row-gap: 5px;
+      left: 450px;
+      position: absolute;
+      top: 130px;
+      width: 450px;
+  }
 .ContentContainer form label{
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
-    margin-left: 300px;
-}
-.form2{
-  display: flex;
-  position: absolute;
-  top: 150px;
-  left: 50px;
-}
-.form2 .form2Input1{
-  margin-left: 52px;
-  width: 180px;
-}
-.form2 .form2Label{
-  margin-left: 10px;
-}
-.form2Input2{
-  margin-left: 13px;
-  height: 35px;
-  width: 178px;
+    margin-right: 40px;
 }
 .inputFocus{
   padding-left: 15px;
   font-size: .96rem;
+  height: 30px;
   border: 1px #000 solid;
 }
 .inputFocus:focus{
@@ -46,8 +41,8 @@
 .btnRegister{
     height: 40px;
     position: absolute;
-    top: 220px;
-    left: 585px;
+    bottom: -90px;
+    left: 75px;
     width:305px;
     border: none;
     background: var(--gray);
@@ -64,31 +59,35 @@
 }
 
 
-.succcessScreen{
-  width: 300px;
-  height: 100px;
-  background: rgba(190, 240, 190, 0.404);
-  display: block;
-  margin-top: 00px;
-  box-shadow: 0 0 2px 0 #000;
-  
+
+.succcessScreen h3{
+  padding-top: 25px;
+  font-weight: 400;
 }
+
 
 
 #showSuccScreen {
-  animation: cssAnimation 0s 1.5s forwards;
+  width: 300px;
+  height:70px;
+  background: var(--blue-main-transp);
+  box-shadow: 0 0 2px 0 #000;
+  margin-left: 500px;
+  margin-top: 70px;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  animation: cssAnimation 0s 2s forwards;
   visibility: hidden;
 }
+
 
 @keyframes cssAnimation {
   to   { visibility: visible; }
 }
 
-
-
 .Loader{
   position: absolute;
-  left: 50%;
+  left: 51%;
   top: 50%;
   z-index: 1;
   width: 120px;
@@ -97,12 +96,16 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   border-top: 2px solid var(--blue-main);
-  -webkit-animation: spin 2s linear infinite ;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear ;
+  animation: spin 2s linear;
+}
+.loaderFinish{
+  border: 2px solid var(--blue-main);
+  transition-duration: .3s;
 }
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(360deg);}
   }
   
   @keyframes spin {
@@ -111,7 +114,9 @@
   }
 
   .checkmark {
-    display: none;
+      position: absolute;
+      left: 45%;
+      top: 40%;
   }
   .draw:after {
       animation-duration: 800ms;

@@ -77,24 +77,20 @@ const MainContainerRegister = () => {
         setCompany('');
         setCoutry('');
         validate(username, password, country, company, [newUser])
-        
-
-        
-            
-        
-
+    
     }
-
-
+    if(success == true){
+    setTimeout(function(){
+        var element = document.getElementById('loaderId')
+        element.classList.add('loaderFinish')
+    }, 2000)
+}
 
   return (
     <>
-        <div className='Container'>
-            <div className='ContentContainer'>
+        <div className='Container registerCon'>
+            <div className='ContentContainer registerConCon'>
                 <h2>Create An Account</h2>
-                <div className='succcessScreen' id='showSuccScreen'>
-                            <h3>Registration Successful</h3>
-                        </div>
 
                 {success ? (
 
@@ -103,20 +99,27 @@ const MainContainerRegister = () => {
                             <h3>Registration successful</h3>
                         </div>
                     
-                        <div className='Loader' onLoad={setTimeout(function() {
+                       
+                        <div className='Loader' id='loaderId' onLoad={setTimeout(function() {
                         window.location.replace('/Login');
+                        
                       }, 5000)}>
-                        <div class="checkmark draw"></div>
+                         
                       </div>
+                      <div id='check' onLoad={setTimeout(function (){
+                        var element = document.getElementById('check')
+                        element.classList.add('checkmark')
+                        element.classList.add('draw')
+                      }, 2000)}></div>
                       </div>
                     
                 ) : (
                 
                 <form>
-                    <label>Username</label>
+                    <label className='item1'>Username</label>
                     <input 
                         type='text' 
-                        className='inputFocus'
+                        className='inputFocus item1_1'
                         id='username'
                         autoComplete='off'
                         onChange={(e) => setUsername(e.target.value)}
@@ -124,55 +127,63 @@ const MainContainerRegister = () => {
                         required
                     />
                      
-                    <label>Password</label>
+                    <label className='item2'>Password</label>
                     <input 
                         type="password" 
                         id='password'
-                        className='inputFocus'
+                        className='inputFocus item2_2'
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
                         required
                     />
-                    <label>Email</label>
+                    <label className='item3'>Confirm password</label>
                     <input 
                         type="password" 
-                        id='password'
-                        className='inputFocus'
-                        onChange={(e) => setEmail(e.target.value)}
+                        id='passwordConfirm'
+                        className='item3_3 inputFocus'
+                        onChange={(e) => setPassword(e.target.value)}
                         value={password}
                         required
                     />
+                    <label className='span2 item4'>Email</label>
+                    <input 
+                        type="text" 
+                        id='email'
+                        className='item4_4 inputFocus'
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                        required
+                    />
                     
-                    <div className='form2'>
-                    <label>Company</label>
+                    
+                    <label className='item5'>Company</label>
                     <input 
                         type='text'
                         id='company'
-                        className='form2Input1 inputFocus'
+                        className='item5_5 inputFocus'
                         autoComplete='off'
                         onChange={(e) => setCompany(e.target.value)}
                         value={company}
                     
                     />
 
-                    <label className='form2Label'>Country</label>
+                    <label className='item6'>Country</label>
                     <input 
                         type='text'
-                        id='username'
-                        className='form2Input2 inputFocus'
+                        id='country'
+                        className='item6_6 inputFocus'
                         autoComplete='off'
                         onChange={(e) => setCoutry(e.target.value)}
                         value={country}
                         required
                     />
-                    </div>
                     <button onClick={handleSubmit} className='btnRegister'>Register</button>
+                    
                 </form>
                 
+                
+               
                 )}
-                
-
-                
 
             </div>
            

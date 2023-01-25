@@ -37,6 +37,8 @@ const MainContainerLogIn = () => {
 
     const userRef = useRef();
     const errRef = useRef();
+        
+       
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -44,12 +46,13 @@ const MainContainerLogIn = () => {
         setUser('');
         setPassword('');
         validate(user, password)
+
+        
         
         registerJSON.find(id => id.username == user ? setSuccess(true) : setSuccess(false))
         registerJSON.find(ps => ps.password == password ? setSuccess(true) : setSuccess(false))
         
         }
-    
 
     const validate = (username, password) =>{
         if(username === '' || username === null){
