@@ -1,15 +1,22 @@
 import React from 'react'
 import '../CSS/index.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import {NavLink} from 'react-router-dom'
+
 
 import {navBar, SubMenuAbout, SubMenuProducts, SubMenuService} from '../constants/index'
 
 const NavBar = () => {
+
+
+
+
+
+
   return (
     <>
    
-
+    
     <nav className='navBar'>
         <ul>
           
@@ -57,7 +64,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink to='/Login' className='btnLink'>
-              <button className='loginBtn'>Log In</button>
+              <button className='loginBtn' id='logBtn'>Log In</button>
               </NavLink>
           </li>
           </ul>

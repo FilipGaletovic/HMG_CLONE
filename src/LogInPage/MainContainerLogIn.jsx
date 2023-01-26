@@ -1,8 +1,7 @@
 import React from 'react';
 import '../CSS/index.css';
-import {useRef, useState, useEffect, useContext} from 'react';
+import {useRef, useState, useEffect, useContext, useSelector} from 'react';
 import {Route, Routes, Link} from 'react-router-dom'
-
 const LOGIN_URL = '/auth'
 const LOCAL_STORAGE_KEY_LOGIN = 'LoginForm'
 
@@ -12,6 +11,8 @@ const MainContainerLogIn = () => {
     const [password, setPassword] = useState('');
     const [errMsg, setErrMsg] = useState(''); 
     const [success, setSuccess] = useState();
+    const [UsernameContext, setUsernameContext] = useState();
+    const [PasswordContext, setPasswordContext] = useState();
 
 
     const penis = {
@@ -47,38 +48,53 @@ const MainContainerLogIn = () => {
         setPassword('');
         validate(user, password)
 
-        
+       
         
         registerJSON.find(id => id.username == user ? setSuccess(true) : setSuccess(false))
         registerJSON.find(ps => ps.password == password ? setSuccess(true) : setSuccess(false))
-        
+        registerJSON.find(id => id.username == user ? setUsernameContext(user): setUsernameContext(''))
+        registerJSON.find(ps => ps.password == password ? setPasswordContext(password) : setPasswordContext(''))
         }
 
     const validate = (username, password) =>{
         if(username === '' || username === null){
             alert('Please Enter Username')
+            setSuccess(false)
         }else if(password === '' || password === null){
             alert('Please Enter Password')
+            setSuccess(false)
+        }
+        else if(registerJSON == null){
+            alert('Please enter an existing account')
+            setSuccess(false)
         }
         else{
             setSuccess(true)
         }
+        
+              
+            
+        
     }
 
-
+    
   return (
     <>
         <div className='Container'>
             <div className='ContentContainer'>
-                <h2>Log In</h2>
+                <h2 id='TitleId'>Log In</h2>
 
                 {success ? (
                     <div className='LogInForm'>
-                        <h2>You are logged in</h2>
-                        <br />
-                        <p>
-                            <a>Go to Home</a>
-                        </p>
+                        
+                        <div className='LogSuccess' id='LogSuccessId' onLoad={setTimeout(function() {
+                        window.location.replace('/Home');
+                      }, 5000)}><h2>Redirecting...</h2></div>
+                        
+                        
+                      <div className='LoaderLogin'></div>
+                      
+
                     </div>
                 ) : (
                 <div className='LogInForm'>
@@ -138,6 +154,7 @@ const sampleLogInfo = [
 
     }
 ]
+
 
 
 

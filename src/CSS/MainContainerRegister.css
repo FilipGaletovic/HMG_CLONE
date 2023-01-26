@@ -96,7 +96,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   border-top: 2px solid var(--blue-main);
-  -webkit-animation: spin 2s linear ;
+  -webkit-animation: spin 2s linear;
   animation: spin 2s linear;
 }
 .loaderFinish{
