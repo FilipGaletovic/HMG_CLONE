@@ -140,16 +140,7 @@ const MainContainerLogIn = () => {
                 }
 
 
-const sampleLogInfo = [
-    {
-        id:1,
-        username: 'Filip',
-        password: 'perobita',
-        Company:'18',
-        Country: 'jobless',
 
-    }
-]
 
 
 
