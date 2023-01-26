@@ -15,10 +15,6 @@ const MainContainerLogIn = () => {
     const [PasswordContext, setPasswordContext] = useState();
 
 
-    const penis = {
-        name: 'ita',
-        surname: 'banov'
-    }
     
     
 
