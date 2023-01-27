@@ -5,6 +5,7 @@ import MainContainer from "./MainContainer";
 import ProductInfo from "./ProductInfo";
 import Footer from "./Footer";
 import ProductButton from "./ProductButton";
+import BackgroundVideo from "./BackgroundVideo";
 
 
 
@@ -15,5 +16,6 @@ export {
     MainContainer,
     ProductInfo,
     Footer,
-    ProductButton
+    ProductButton,
+    BackgroundVideo
 }

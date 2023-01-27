@@ -1,14 +1,13 @@
 import React from 'react'
 import {
     NavBar, Logo, SliderMain, MainContainer, ProductInfo,
-    Footer, ProductButton
+    Footer, ProductButton, BackgroundVideo
 } from './componentExport'
 
 const HomePage = () => {
   return (
     <>
-        <Logo />
-        <NavBar/>
+        <BackgroundVideo />
         <SliderMain />
         <MainContainer />
         <Footer />

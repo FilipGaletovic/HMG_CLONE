@@ -2,77 +2,52 @@
     height: 0px;
     position: sticky;
     z-index: 99;
-    width: 100%;
 }
-
-
-nav>ul{
-    display: flex;
-    flex-direction: row;
+.navBar ul{
+    display: inline-block;
+    width: 100%;
     list-style: none;
     justify-content: center;
     margin-top:0px;
-    height: 60px;
-    background: var(--gray-light-gradient)
+    height: 60px;    
+    background: var(--gray); 
+    clip-path: polygon(0 0, 100% 0%, 98% 100%, 2% 100%);    
 }
-.navBar li a{
+.navBar ul li{
+    display: inline-block;
+    position: relative;
+}
+.navBar ul li a{
+    display: inline-block;
     text-decoration: none;
     color: #fff;
-    margin-right: 100px;
-    transition-duration: .3s;
+    margin: 0 50px;
+    font-weight: 700;
+    transition: all ease .3s;
     font-size: 1.1rem;
 }
-.liAbout, .liService, .liProducts, .liHome{
-    margin-top: 20px;
-}
-.navBar li a:hover{
+.navBar ul li a:hover{
     color: rgb(189, 189, 189);
 }
 
-.submenu{
-    width: 200px;
-    background: var(--blue-main-transp);
-    list-style-type: none;
-    padding: 20px 0 20px 20px;
+.navBar ul li:after {
+    content: '';
     position: absolute;
-    display: none;
-    margin-top: 19px;
-}
-.submenu li a{
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.subOne{
-    width: 250px;
-    left: 29.5%;
-    height: 120px;
-    line-height: 40px;
-}
-.subTwo{
-    width: 320px;
-    left: 38.5%;
-    height: 130px;
-    line-height: 40px;
-}
-.subThree{
-    width: 280px;
-    height: 130px;
-    left: 47%;
-    line-height: 40px;
-}
-.liService:hover .submenu{
-    display: block;
-    animation: slideDown .2s;
-}
-.liAbout:hover .submenu{
-    display: block;
-    animation: slideDown .2s;
-}
-.liProducts:hover .submenu{
-    display: block;
-    animation: slideDown .2s;
-}
+    width: 50%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    top: 30px;
+    left: 40px;
+    background-color: var(--blue-main);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .navBar ul li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
 .subThree::after, .subTwo::after, .subOne::after{
     content: '';
@@ -101,20 +76,22 @@ nav>ul{
     height: 60px;
     margin-top: 00px;
     border: none;
-    background: rgb(43, 43, 43);
+    background: transparent;
     font-size: 1.1rem;
     font-family: 'Montserrat';
     font-weight: 500;
     cursor: pointer;
     color: rgb(0, 0, 0);
     transition-duration: .5s;
-    transform:skew(-14deg) scale(1.1);
     color: #fff;
+    font-weight: 700;
+    padding-right: 10px;
     margin-left: 20px;
    
 }
 .contactBtn:hover{
-    color: rgb(158, 158, 158);
+    color: #fff;
+    background: var(--blue-main);
 }
 
 .loginBtn{
@@ -123,18 +100,18 @@ nav>ul{
     margin-top: 0px;
     margin-right: -30px;
     border: none;
-    background: #0c487c;
+    padding-right: 15px;
     font-size: 1.1rem;
     font-family: 'Montserrat';
     font-weight: 600;
+    background: transparent;
     cursor: pointer;
-    color: rgb(0, 0, 0);
+    color: #fff;
     transition-duration: .5s;
-    transform:skew(-14deg);
    
 }
 .loginBtn:hover{
-    color: #fff;
+    background: var(--blue-main);
 }
 .btnLink{
     width: 100px;
