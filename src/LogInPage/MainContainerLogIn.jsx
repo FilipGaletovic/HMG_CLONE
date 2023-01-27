@@ -15,10 +15,6 @@ const MainContainerLogIn = () => {
     const [PasswordContext, setPasswordContext] = useState();
 
 
-    const penis = {
-        name: 'ita',
-        surname: 'banov'
-    }
     
     
 
@@ -144,16 +140,7 @@ const MainContainerLogIn = () => {
                 }
 
 
-const sampleLogInfo = [
-    {
-        id:1,
-        username: 'Filip',
-        password: 'perobita',
-        Company:'18',
-        Country: 'jobless',
 
-    }
-]
 
 
 
