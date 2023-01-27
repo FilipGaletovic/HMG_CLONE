@@ -6,6 +6,7 @@ import ProductInfo from "./ProductInfo";
 import Footer from "./Footer";
 import ProductButton from "./ProductButton";
 import BackgroundVideo from "./BackgroundVideo";
+import HeaderText from "./HeaderText";
 
 
 
@@ -17,5 +18,6 @@ export {
     ProductInfo,
     Footer,
     ProductButton,
-    BackgroundVideo
+    BackgroundVideo,
+    HeaderText
 }

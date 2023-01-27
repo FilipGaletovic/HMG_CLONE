@@ -1,0 +1,31 @@
+.TextArea{
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.TextArea h1{
+    font-size: 7.2rem;
+    font-weight: 1000;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 30px;
+}   
+.TextArea h1::after{
+    content: '';
+    position: absolute;
+    width: 890px;
+    height: 10px;
+    background: yellow;
+    bottom: 170px;
+    left: 25px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.TextArea p{
+    font-size: 1.3rem;
+    color: #fff;
+    margin-right: 20px;
+    text-align: center;
+}

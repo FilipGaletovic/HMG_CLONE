@@ -10,8 +10,8 @@
     width: 100%;
     position: absolute;
     display: flex;
-    top: 0px;
-    flex-direction: column;
+    top: -10px;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
