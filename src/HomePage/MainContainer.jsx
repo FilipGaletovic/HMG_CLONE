@@ -2,11 +2,12 @@ import React from 'react'
 import Aos from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css'
-import ProductInfo from './ProductInfo';
+import { ProductInfo, SectionTwo} from './componentExport'
 import Product1 from '../assets/Product1.jpg'
 import Product2 from '../assets/Product2.jpg'
 import Product3 from '../assets/Product3.jpg'
 import first_p_image from '../assets/first-p-image.png'
+
 
 
 
@@ -30,15 +31,16 @@ const MainContainer = () => {
    
         
     <>
-        <div className='second-half'>
-            <div className='Container-Main'>
-
+        <section className='section-one'>
+        
+            <div className='Container-One'>
+                
                 <div className='first-p'>
                     <h2>Quality-Precision-Authentic</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, 
+                    <p className='first-p1'>Lorem ipsum dolor sit amet consectetur, 
                         adipisicing elit. Minus quos ullam explicabo sed
                          consequatur sequi quis maxime libero optio nisi? Mollitia f
-                         uga tempora molestiae <br /> <br /> adipisci repellendus doloribus molestias 
+                         uga tempora molestiae <br /> <br /></p><p className='first-p2'> adipisci repellendus doloribus molestias 
                          excepturi hic. Lorem ipsum dolor sit amet consectetur
                           adipisicing elit. Accusamus facilis illum at blanditiis, minus, 
                          temporibus error eius eveniet ut optio enim repellat maiores 
@@ -52,7 +54,15 @@ const MainContainer = () => {
                         <div className='arrowUp'></div>
                     </button>
                 </div>
+            </div>
+            </section>
 
+
+            <section className='section-two'></section>
+            <SectionTwo />
+
+            <section className='section-three'>
+                <div className='Container-Three'>
                 <div className='second-p'>
                     <h2>Pre-Modified Products</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, 
@@ -80,8 +90,9 @@ const MainContainer = () => {
                     
                 </div>
 
-            </div>
-        </div>
+                </div>
+                </section>
+        
 
    </>
   )

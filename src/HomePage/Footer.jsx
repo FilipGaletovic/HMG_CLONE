@@ -47,7 +47,7 @@ const Footer = () => {
                 <h2>Get In Touch</h2>
                 <div className='social_images'>
                 {footerListSocial.map((image, index) => (
-                    <a ><img key={image.id} src={image.image}/></a>
+                    <a><img key={image.id} src={image.image}/></a>
                 ))}
                 </div>
             </section>

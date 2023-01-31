@@ -14,15 +14,7 @@ const MainContainerLogIn = () => {
     const [UsernameContext, setUsernameContext] = useState();
     const [PasswordContext, setPasswordContext] = useState();
 
-
-    
-    
-
- 
     const registerJSON = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_LOGIN))
-    
-
-
 
     useEffect(() => {
         userRef.current.focus();
@@ -36,21 +28,18 @@ const MainContainerLogIn = () => {
     const errRef = useRef();
         
        
-
     const handleSubmit = (e) =>{
         e.preventDefault();
 
         setUser('');
         setPassword('');
         validate(user, password)
-
-       
-        
-        registerJSON.find(id => id.username == user ? setSuccess(true) : setSuccess(false))
-        registerJSON.find(ps => ps.password == password ? setSuccess(true) : setSuccess(false))
+        registerJSON.find(id => id.username == user && id.password == password ? setSuccess(true) : setSuccess(false))
         registerJSON.find(id => id.username == user ? setUsernameContext(user): setUsernameContext(''))
         registerJSON.find(ps => ps.password == password ? setPasswordContext(password) : setPasswordContext(''))
         }
+
+
 
     const validate = (username, password) =>{
         if(username === '' || username === null){
@@ -67,13 +56,8 @@ const MainContainerLogIn = () => {
         else{
             setSuccess(true)
         }
-        
-              
-            
-        
     }
 
-    
   return (
     <>
         <div className='Container'>
@@ -82,15 +66,11 @@ const MainContainerLogIn = () => {
 
                 {success ? (
                     <div className='LogInForm'>
-                        
                         <div className='LogSuccess' id='LogSuccessId' onLoad={setTimeout(function() {
                         window.location.replace('/Home');
                       }, 5000)}><h2>Redirecting...</h2></div>
-                        
-                        
-                      <div className='LoaderLogin'></div>
-                      
 
+                      <div className='LoaderLogin'></div>
                     </div>
                 ) : (
                 <div className='LogInForm'>
@@ -137,7 +117,7 @@ const MainContainerLogIn = () => {
         </div>
     </>
   )
-                }
+}
 
 
 

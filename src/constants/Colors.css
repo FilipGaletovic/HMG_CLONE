@@ -8,7 +8,10 @@
     --ultra-light-gray: rgb(221, 221, 221);
     --light-gray-gradient: linear-gradient(0deg, rgba(201,201,201,1) 0%, rgba(255,255,255,1) 100%);
     --blue-main: #2a4863;
-    --blue-main-transp: #2b4e6db0;
+    --blue-main-light: #386c9b;
+    --blue-main-transp-light: #2b4e6dd5;
+    --blue-main-transp-heavy: #2b4e6db0;
+    --green-transp-light: rgba(28, 197, 28, 0.801);
   
     
     

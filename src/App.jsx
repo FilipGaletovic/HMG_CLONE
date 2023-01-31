@@ -15,12 +15,6 @@ import RegisterPage from './RegisterPage/RegisterPage';
         <Route path='/Login' element={<LogInPage />}/>
         <Route path='/Register' element={ <RegisterPage /> } />
       </Routes>
-      
-      
-      
-        
-      
-
       </>
   
  );

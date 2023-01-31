@@ -1,10 +1,21 @@
+.blueBar{
+    width: 100%;
+    height: 50px;
+    background: var(--blue-main);
+}
+
 .VideoContainer{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
+    display: block;
+    position: relative;
 }
 
 .VideoContainer video{
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: fill;
 }
 .Content{
     width: 100%;
@@ -15,10 +26,5 @@
     justify-content: center;
     align-items: center;
 }
-.overLay{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    background: rgba(1, 10, 32, 0.3);
-}
+
 

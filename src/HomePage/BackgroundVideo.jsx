@@ -1,12 +1,12 @@
 import React from 'react'
-import { Logo, NavBar, HeaderText } from './componentExport'
+import { Logo, NavBar, HeaderText, BlueBar } from './componentExport'
 import video1 from '../assets/Videos/BackgroundVideo.mp4'
 import '../CSS/BackgroundVideo.css'
 
 const BackgroundVideo = () => {
   return (
     <>
-     
+     <BlueBar />
     <div className='VideoContainer'>
       <div className="overLay"></div>
       <div className="Content">
