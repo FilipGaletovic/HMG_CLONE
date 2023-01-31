@@ -9,12 +9,14 @@ import RegisterPage from './RegisterPage/RegisterPage';
 
  const App = () => (
     <>
+    <div>
       <Routes>
       <Route path='/' element={ <HomePage />}/>
         <Route path='/Home' element={ <HomePage />}/>
         <Route path='/Login' element={<LogInPage />}/>
         <Route path='/Register' element={ <RegisterPage /> } />
       </Routes>
+      </div>
       </>
   
  );

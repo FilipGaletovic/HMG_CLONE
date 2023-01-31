@@ -10,6 +10,7 @@ import HeaderText from "./HeaderText";
 import SectionTwo from "./SectionTwo";
 import BlueBar from './BlueBar';
 import Section3 from "./SectionTwo";
+import HeaderButton from "./HeaderButton";
 
 
 
@@ -26,5 +27,6 @@ export {
     SectionTwo,
     BlueBar,
     Section3,
+    HeaderButton
 
 }

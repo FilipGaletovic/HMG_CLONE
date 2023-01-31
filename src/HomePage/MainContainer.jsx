@@ -7,6 +7,7 @@ import Product1 from '../assets/Product1.jpg'
 import Product2 from '../assets/Product2.jpg'
 import Product3 from '../assets/Product3.jpg'
 import first_p_image from '../assets/first-p-image.png'
+import '../CSS/MainContainer.css'
 
 
 
@@ -58,7 +59,9 @@ const MainContainer = () => {
             </section>
 
 
-            <section className='section-two'></section>
+            <section className='section-two'>
+            </section>
+           
             <SectionTwo />
 
             <section className='section-three'>

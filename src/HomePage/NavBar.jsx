@@ -1,6 +1,7 @@
 import React from 'react'
 import '../CSS/index.css'
-import { useState, useContext } from 'react'
+import { useState, useContext, useRef, useEffect } from 'react'
+import {useInView} from 'react-intersection-observer'
 import {Link} from 'react-router-dom'
 
 
@@ -8,15 +9,22 @@ import {navBar, SubMenuAbout, SubMenuProducts, SubMenuService} from '../constant
 
 const NavBar = () => {
 
+  	const {ref: navRef, inView: navVisible } = useInView()
+    
+    window.onscroll = function (e) {
+      var your_div = document.getElementById('navbar');
+      var invisible = your_div.offsetTop;
+      if(window.pageYOffset > invisible) {
+        your_div.classList.add('navInvisible')
+      }else your_div.classList.remove('navInvisible')
+      
+    }
 
-
-
-
-
+    
   return (
     <>
    
-    <div className='navBar'>
+    <div className='navBar' id='navbar' ref={navRef}>
       <Link to='/' className='navHome'>Home</Link>
       <span className='HomeSpan'></span>
       <div className="subNav">
@@ -62,6 +70,7 @@ const NavBar = () => {
       </Link>
 
       </div>
+      
       
     </>
   )

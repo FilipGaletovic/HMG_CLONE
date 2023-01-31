@@ -17,9 +17,16 @@
   scroll-behavior: smooth;
 }
 
-
-body {
+body, html{
   margin: 0;
+  padding:0;
+}
+body>div {  
+  margin: 0;
+  padding:0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
   background: rgb(53, 52, 52);
   font-family: 'Montserrat';
 }

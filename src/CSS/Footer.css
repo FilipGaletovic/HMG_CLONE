@@ -6,6 +6,17 @@
     padding-left: 70px;
     padding-top: 100px;
     justify-content: center;
+    position: relative;
+}
+.footer-container::before{
+    content: '';
+    width: 100%;
+    height: 97%;
+    top: 0px;
+    background: transparent;
+    border-top: 10px solid var(--blue-main);
+    border-bottom: 11px solid var(--blue-main);
+    position: absolute;
 }
 .footer-container>section{
     font-size: 1.2rem;
@@ -35,7 +46,6 @@
     color: var(--blue-main);
     cursor: pointer;
 }
-
 .social_images{
     display: grid;
     grid-template-columns: repeat(4, 50px);

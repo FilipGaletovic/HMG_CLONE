@@ -1,7 +1,7 @@
 import React from 'react'
 import {
     NavBar, Logo, SliderMain, MainContainer, ProductInfo,
-    Footer, ProductButton, BackgroundVideo, SectionOne
+    Footer, ProductButton, BackgroundVideo
 } from './componentExport'
 
 const HomePage = () => {
