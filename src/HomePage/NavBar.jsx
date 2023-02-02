@@ -12,11 +12,11 @@ const NavBar = () => {
   	const {ref: navRef, inView: navVisible } = useInView()
     
     window.onscroll = function (e) {
-      var your_div = document.getElementById('navbar');
-      var invisible = your_div.offsetTop;
+      var nav_div = document.getElementById('navbar');
+      var invisible = nav_div.offsetTop;
       if(window.pageYOffset > invisible) {
-        your_div.classList.add('navInvisible')
-      }else your_div.classList.remove('navInvisible')
+        nav_div.classList.add('navInvisible')
+      }else nav_div .classList.remove('navInvisible')
       
     }
 

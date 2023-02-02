@@ -38,5 +38,40 @@
     transform: translateY(-8px);
 }
 
+@media (max-width: 900px) {
+    .container>h1{
+        font-size: 2rem;
+    }
+    .container>p{
+        font-size: 1rem;
+    }
+    .btnSeeMore{
+        width: 150px;
+        height: 40px;
+        padding-top: 5px;
+        font-size: 1rem;
+    }
+
+}
+@media (max-width: 500px) {
+
+    .container>h1{
+        font-size: 1.7rem;
+        padding: 0 40px;
+    }
+    .container>p{
+        font-size: .9rem;
+        padding: 0 20px;
+    }
+    .btnSeeMore{
+        width: 130px;
+        height: 35px;
+        font-size: .9rem;
+        padding-top: 3px;
+    }
+    
+}
+
+
 
     

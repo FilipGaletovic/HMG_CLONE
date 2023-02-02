@@ -62,7 +62,7 @@
 }
 @media (max-width: 1150px) {
     .TextArea h1{
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .TextArea p{
         font-size: .8rem;
@@ -73,6 +73,48 @@
         height: 5px;
     }
     
+}
+@media (max-width: 900px) {
+    .TextArea h1::after{
+        left: -20px;
+    }
+}
+@media (max-width: 850px) {
+    .TextArea h1::after{
+        left: 50px;
+        top: 130px;
+        width: 300px;
+    }
+}
+@media (max-width: 700px) {
+    .TextArea h1{
+        font-size: 3rem;
+        margin-left: -20px;
+    }
+    .TextArea p{
+        font-size: .8rem;
+    }
+    .TextArea h1::after{
+        left: 20px;
+        top: 115px;
+    }
+    
+}
+@media (max-width: 500px) {
+    .TextArea h1::after{
+        left: -20px;
+        width: 250px;
+        height: 4px;
+        top: 115px;
+    }
+}
+@media (max-width: 387px) {
+    .TextArea h1::after{
+        left: 0px;
+        width: 200px;
+        height: 4px;
+        top: 175px;
+    }
 }
 
 /* HEADER SCROLL */

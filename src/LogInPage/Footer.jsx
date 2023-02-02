@@ -21,25 +21,26 @@ const Footer = () => {
             <section className='footer-section-two'>
                 <h2>Products</h2>
             {footerListProducts.map((product, index) => (
-                    <a href='#' ><p key={product.id} className='hoverP'>
-                        {product.name}
-                    </p> </a>
+                    
+                       <a href='#' key={product.id} className='hoverP'>
+                        {product.name}</a>
+                    
                 ))}
             </section>
 
             <section className='footer-section-three'>
                 <h2>About</h2>
                 {footerListAbout.map((text, index) => (
-                    <a href='#' ><p key={text.id} className='hoverP'>
-                        {text.name}</p></a>
+                    <a href='#' key={text.id} className='hoverP'>
+                        {text.name}</a>
                 ))}
             </section>
 
             <section className='footer-section-four'>
                 <h2>Legal</h2>
                 {footerListLegal.map((text, index) => (
-                    <a href='#'><p key={text.id} className='hoverP'>
-                        {text.name}</p></a>
+                    <a href='#' key={text.id} className='hoverP'>
+                        {text.name}</a>
                 ))}
             </section>
             
@@ -47,7 +48,9 @@ const Footer = () => {
                 <h2>Get In Touch</h2>
                 <div className='social_images'>
                 {footerListSocial.map((image, index) => (
-                    <a ><img key={image.id} src={image.image}/></a>
+                    <a >
+                        <img key={image.id} src={image.image}/>
+                    </a>
                 ))}
                 </div>
             </section>

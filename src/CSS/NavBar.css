@@ -5,7 +5,7 @@
     margin-right: -300px;
     margin-left: 20px;
     position: fixed;
-    transition: .5s ease-in-out;
+    transition: .1s ease-in-out;
     background: var(--blue-main-transp-heavy);
     justify-content: center;
 }
@@ -15,7 +15,7 @@
     height: 50px;
     background: var(--blue-main-transp-heavy);
     position: absolute;
-    transition: .5s ease;
+    transition: .1s ease;
     left: -50px;
     bottom:0;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 75% 50%);
@@ -235,7 +235,8 @@
     background: var(--gray);
     font-size: 1rem;
     font-family: 'Montserrat';
-    margin-left: 30px;
+    margin-left:30px;
+    padding-right: 15px;
     cursor: pointer;
     margin-top: -17px;
     position: absolute;

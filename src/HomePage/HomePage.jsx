@@ -1,8 +1,9 @@
 import React from 'react'
 import {
     NavBar, Logo, SliderMain, MainContainer, ProductInfo,
-    Footer, ProductButton, BackgroundVideo
+   ProductButton, BackgroundVideo
 } from './componentExport'
+import Footer from '../LogInPage/Footer'
 
 const HomePage = () => {
   return (

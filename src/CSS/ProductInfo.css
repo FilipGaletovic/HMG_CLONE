@@ -59,3 +59,53 @@
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
 }
+
+@media (max-width: 1000px) {
+    .Product_container{
+        width: 300px;
+        height: 280px;
+    }
+    .Product_container>img{
+        width: 300px;
+    }
+    .Product_container>h2{
+        font-size: 1.3rem;
+        margin-left: -10px;
+    }
+    .ProductBtn{
+        width: 220px;
+        font-size: .95rem;
+    }
+}
+@media (max-width: 750px) {
+    .Product_container{
+        margin-left: 20px;
+    }
+
+}
+@media (max-width: 550px) {
+    .Product_container{
+        margin-left: 50px;
+        width: 270px;
+        height: 250px;
+    }
+    .Product_container>img{
+        width: 270px;
+    }
+    .Product_container>h2{
+        font-size: 1.1rem;
+    }
+    .ProductBtn{
+        width: 200px;
+        height: 30px;
+        font-size: .8rem;
+    }
+    .ProductBtn::after{
+        right: -15px;
+        border-left: 15px solid var(--blue-main);
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+    }
+    
+    
+}

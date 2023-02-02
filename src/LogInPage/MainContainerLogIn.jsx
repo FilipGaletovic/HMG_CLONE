@@ -61,6 +61,10 @@ const MainContainerLogIn = () => {
   return (
     <>
         <div className='Container'>
+            <div className="welcomeText">
+                <h1>WELCOME TO HMG</h1>
+                <p>Please Log In to make your experience is faster and easier at checkout </p>
+            </div>
             <div className='ContentContainer'>
                 <h2 id='TitleId'>Log In</h2>
 

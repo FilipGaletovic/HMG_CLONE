@@ -21,10 +21,11 @@ const MainContainerRegister = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [repeatPassword, setRepeatPassword] = useState('');
     const [company, setCompany] = useState('');
     const [country, setCoutry] = useState('');
     const [email, setEmail] = useState('');
-    const [success, setSuccess] = useState();
+    const [success, setSuccess] = useState(false);
 
     const [registerInfo, setRegisterInfo] = useState ( () =>  {
 
@@ -43,24 +44,35 @@ const MainContainerRegister = () => {
         
     
 
-    const validate = (username, password, country, company, [newUser]) => {
+    const validate = (username, password, repeatPassword, country, company, [newUser]) => {
         if(username === '' || username === null){
             alert('Please Enter Valid Information')
+            setSuccess(false)
         }else if(password === '' || password === null){
             alert('Please Enter Valid Information')
-        }else if(country === '' || country === null){
+            setSuccess(false)
+        }else if(password !== repeatPassword){
+            setSuccess(false)
+            alert('Please confirm your password')
+            
+        }
+        else if(country === '' || country === null){
             alert('Please Enter Valid Information')
+            setSuccess(false)
         }
         if(company === '' || company === null){
             company === 'no company'
         }
         if(password.length > 20 || password.length < 5){
             alert('Please provide a password with minimum of 5 and max 20 characters')
+            setSuccess(false)
         }else {
             setRegisterInfo([newUser])
             setSuccess(true)
         }
     }
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -68,15 +80,17 @@ const MainContainerRegister = () => {
             id: 2,
             username: username,
             password: password,
+            repeatPassword: repeatPassword,
             emal: email,
             company: company,
             country: country
         }
         setUsername('');
         setPassword('');
+        setRepeatPassword('');
         setCompany('');
         setCoutry('');
-        validate(username, password, country, company, [newUser])
+        validate(username, password, repeatPassword, country, company, [newUser])
     
     }
     if(success == true){
@@ -89,7 +103,11 @@ const MainContainerRegister = () => {
   return (
     <>
         <div className='Container registerCon'>
-            <div className='ContentContainer registerConCon'>
+        <div className="welcomeText">
+                <h1>WELCOME TO HMG</h1>
+                <p>Please continute by registering in our system</p>
+            </div>
+            <div className='ContentContainers registerConCon'>
                 <h2>Create An Account</h2>
 
                 {success ? (
@@ -141,8 +159,8 @@ const MainContainerRegister = () => {
                         type="password" 
                         id='passwordConfirm'
                         className='item3_3 inputFocus'
-                        onChange={(e) => setPassword(e.target.value)}
-                        value={password}
+                        onChange={(e) => setRepeatPassword(e.target.value)}
+                        value={repeatPassword}
                         required
                     />
                     <label className='span2 item4'>Email</label>

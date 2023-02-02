@@ -87,7 +87,7 @@ const MainContainer = () => {
                         <ProductInfo image={Product2} text={ProductText2}/>
                     </a>
 
-                    <a href='#' data-aos-delay={200} data-aos="fade-right" data-aos-once="true">
+                    <a href='#' data-aos-delay={200} data-aos="fade-right" data-aos-once="true" className='product-three'>
                         <ProductInfo image={Product3} text={ProductText3}/>
                     </a>
                     

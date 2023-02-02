@@ -1,29 +1,37 @@
 .registerCon{
   height: 760px;
+
 }
 
 .registerConCon{
-  height: 730px;
-  margin-top: 10px;
+  height: 620px;
+  margin-top: 100px;
+  margin-left: 2.5%;
   display: inline-block;
   text-align: center;
+  position: relative;
+  width: 500px;
+  clip-path: polygon(100% 0, 100% 86%, 80% 100%, 0 100%, 0 0);
+  background: var(--light-gray-gradient);
   align-items: center;
   justify-content: center;
 }
-  .ContentContainer>form{
+  .ContentContainers>form{
       height: auto;
       background: none;
       display: grid;
       grid-template-columns: repeat(1, auto);
-      row-gap: 5px;
-      left: 450px;
+      row-gap: 1px;
+      left: 70px;
       position: absolute;
-      top: 130px;
-      width: 450px;
+      top: 100px;
+      width: 350px;
   }
-.ContentContainer form label{
+.ContentContainers form label{
     text-align: left;
+    font-size: 1rem;
     margin-top: 10px;
+    padding-bottom: 3px;
     margin-right: 40px;
 }
 .inputFocus{
@@ -41,9 +49,9 @@
 .btnRegister{
     height: 40px;
     position: absolute;
-    bottom: -90px;
-    left: 75px;
-    width:305px;
+    bottom: -70px;
+    left: 35px;
+    width: 280px;
     border: none;
     background: var(--gray);
     transition-duration: .3s;
@@ -57,31 +65,25 @@
   box-shadow: 0 0 5px 0 var(--blue-main);
 
 }
-
-
-
 .succcessScreen h3{
   padding-top: 25px;
   font-weight: 400;
 }
-
-
-
 #showSuccScreen {
   width: 300px;
   height:70px;
-  background: var(--blue-main-transp);
+  background: var(--blue-main-transp-heavy);
   box-shadow: 0 0 2px 0 #000;
-  margin-left: 500px;
+  margin-left: 100px;
   margin-top: 70px;
   font-size: 1rem;
   color: rgb(0, 0, 0);
-  animation: cssAnimation 0s 2s forwards;
+  animation: visibility 0s 2s forwards;
   visibility: hidden;
 }
 
 
-@keyframes cssAnimation {
+@keyframes visibility {
   to   { visibility: visible; }
 }
 
@@ -115,8 +117,8 @@
 
   .checkmark {
       position: absolute;
-      left: 45%;
-      top: 40%;
+      left: 35%;
+      top: 37%;
   }
   .draw:after {
       animation-duration: 800ms;
