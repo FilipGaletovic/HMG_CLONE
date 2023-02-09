@@ -221,6 +221,14 @@
     transform: translateX(100px);
   }
 }
+@media (max-width: 1250px) {
+  .navBar{
+    display: none;
+  }
+  .btnLink{
+    display: none;
+  }
+}
 @media(max-width: 1200px) {
   .navInvisible{
     transform: translateX(10px);
@@ -271,4 +279,43 @@
 }
 .btnLink{
     width: 100px;
+}
+/* MOBILE NAV */
+
+
+.MobileNav{
+  visibility: hidden;
+}
+.hamburgerMenu{
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  .MobileNav{
+      position: fixed;
+      top: 55px;
+      left: 100%;
+      width: 100%;
+      min-height: 100vh;
+      visibility: visible;
+      display: block;
+      background-color: var(--blue-main-transp-light);
+      z-index: 98;  
+      padding-top: 120px;
+      transition-duration: 0.5s;
+  }
+  .hamburgerMenu{
+    display: block;
+  }
+  .MobileNav.is-active{
+    left: 60%;
+    width: 40%;
+    visibility: visible;
+}
+}
+@media (max-width: 750px){
+  .MobileNav.is-active{
+    left: 0%;
+    width: 100%;
+  }
 }

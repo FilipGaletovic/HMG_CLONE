@@ -11,6 +11,8 @@ import SectionTwo from "./SectionTwo";
 import BlueBar from './BlueBar';
 import Section3 from "./SectionTwo";
 import HeaderButton from "./HeaderButton";
+import MobileNav from "./MobileNav";
+import Hamburger from "./Hamburger";
 
 
 
@@ -27,6 +29,8 @@ export {
     SectionTwo,
     BlueBar,
     Section3,
-    HeaderButton
+    HeaderButton,
+    MobileNav,
+    Hamburger
 
 }

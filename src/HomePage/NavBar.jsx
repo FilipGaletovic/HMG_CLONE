@@ -1,11 +1,11 @@
 import React from 'react'
 import '../CSS/index.css'
+import '../CSS/MobileNav.css'
 import { useState, useContext, useRef, useEffect } from 'react'
 import {useInView} from 'react-intersection-observer'
 import {Link} from 'react-router-dom'
-
-
 import {navBar, SubMenuAbout, SubMenuProducts, SubMenuService} from '../constants/index'
+import { MobileNav } from './componentExport';
 
 const NavBar = () => {
 
@@ -18,6 +18,15 @@ const NavBar = () => {
         nav_div.classList.add('navInvisible')
       }else nav_div .classList.remove('navInvisible')
       
+    }
+
+
+    const hamburger = document.getElementById('hamburgerId');
+    const mobileNav = document.getElementById('mobileNavId');
+
+    function handleBurger() {
+        hamburger.classList.toggle('is-active');
+        mobileNav.classList.toggle('is-active');
     }
 
     
@@ -69,6 +78,20 @@ const NavBar = () => {
         <button className='loginBtn' id='logBtn'>Log In</button>
       </Link>
 
+      </div>
+
+      <div className="hamburgerMenu">
+            <button 
+            className="hamburger" 
+            id='hamburgerId'
+            onClick={handleBurger}
+            >
+                <div className="hamburger-bar"></div>
+            </button>
+        </div>
+
+      <div className='MobileNav' id='mobileNavId'>
+        <MobileNav />
       </div>
       
       
