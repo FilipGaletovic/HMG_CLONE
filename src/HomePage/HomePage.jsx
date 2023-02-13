@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import {
     NavBar, Logo, SliderMain, MainContainer, ProductInfo,
    ProductButton, BackgroundVideo
@@ -6,6 +7,8 @@ import {
 import Footer from '../LogInPage/Footer'
 
 const HomePage = () => {
+
+ 
   return (
     <>
         <BackgroundVideo />

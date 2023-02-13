@@ -126,7 +126,7 @@
     left: 0;
     z-index: 80;
     margin-top: -600px;
-    background-image: url(../assets/section-three-image.png);
+    background-image: url(../../assets/section-three-image.png);
     background-size: cover;
     background-attachment: fixed;
 }

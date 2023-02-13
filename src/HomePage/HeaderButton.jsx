@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CSS/HeaderDivs.css';
+import '../CSS/HomeCSS/HeaderDivs.css';
 import { useEffect } from 'react';
 
 const HeaderButton = () => {

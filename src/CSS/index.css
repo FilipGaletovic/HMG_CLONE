@@ -2,15 +2,15 @@
 
 
 
-@import "./NavBar.css";
-@import "./Logo.css";
-@import "./MainContainer.css";
-@import "./Slider.css";
-@import "./ProductInfo.css";
+@import "./HomeCSS/NavBar.css";
+@import "./HomeCSS/Logo.css";
+@import "./HomeCSS/MainContainer.css";
+@import "./HomeCSS/Slider.css";
+@import "./HomeCSS/ProductInfo.css";
 @import "../constants/Colors.css";
-@import "./Footer.css";
-@import "./MainContainerLogIn.css";
-@import "./MainContainerRegister.css";
+@import "./HomeCSS/Footer.css";
+@import "./LoginCSS/MainContainerLogIn.css";
+@import "./RegisterCSS/MainContainerRegister.css";
 
 
 * {

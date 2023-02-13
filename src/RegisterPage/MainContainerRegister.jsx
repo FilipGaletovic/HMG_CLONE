@@ -8,14 +8,6 @@ export const LOCAL_STORAGE_KEY_REGISTER = 'LoginForm'
 
 
 
-const sampleRegistration = [{
-            id: 1,
-            username: 'Fila',
-            password: 'perobitanga',
-            company: 'HMG',
-            country: 'Croatia'
-}
-]
 
 const MainContainerRegister = () => {
 

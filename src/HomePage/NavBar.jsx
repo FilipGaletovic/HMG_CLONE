@@ -1,15 +1,17 @@
 import React from 'react'
 import '../CSS/index.css'
-import '../CSS/MobileNav.css'
+import '../CSS/HomeCSS/MobileNav.css'
 import { useState, useContext, useRef, useEffect } from 'react'
 import {useInView} from 'react-intersection-observer'
 import {Link} from 'react-router-dom'
 import {navBar, SubMenuAbout, SubMenuProducts, SubMenuService} from '../constants/index'
 import { MobileNav } from './componentExport';
-
+const LOCAL_STORAGE_KEY_LOGIN = 'LoginForm'
 const NavBar = () => {
 
   	const {ref: navRef, inView: navVisible } = useInView()
+    const [myAccountText, setMyAccountText] = useState('');
+    const [LoginLink, setLoginLink] = useState('/Login');
     
     window.onscroll = function (e) {
       var nav_div = document.getElementById('navbar');
@@ -29,6 +31,18 @@ const NavBar = () => {
         mobileNav.classList.toggle('is-active');
     }
 
+    
+    
+    const registerJSON = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_LOGIN))
+    
+    useEffect(() => {
+      if(registerJSON !== null){
+      registerJSON.find(id => id.username !== '' ? setMyAccountText('My Account'): setMyAccountText('Log In'));
+      setLoginLink('/my-account')
+    }
+      else setMyAccountText('Log In')
+    }, [])
+    
     
   return (
     <>
@@ -62,7 +76,7 @@ const NavBar = () => {
       <div className="subNav">
         <button className='subNavBtn'>About</button>
         <div className="subNav-content contentAbout">
-          <Link to='/'>Founders</Link>
+          <Link to='/About'>Founders</Link>
           <span className='subSpan'></span>
           <Link to='/'>Payment Options</Link>
           <span className='subSpan'></span>
@@ -74,8 +88,8 @@ const NavBar = () => {
         <button className='contactBtn'>Contact Us</button>
       </Link>
          
-      <Link to='/Login' className='btnLink'>
-        <button className='loginBtn' id='logBtn'>Log In</button>
+      <Link to={LoginLink} className='btnLink'>
+        <button className='loginBtn' id='logBtn'>{myAccountText}</button>
       </Link>
 
       </div>

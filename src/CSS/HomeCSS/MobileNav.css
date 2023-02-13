@@ -66,23 +66,15 @@
 }
 .MobileList button::before{
     content: '';
-    width: 50px;
+    width: 5px;
     height: 40px;
     background: #fff;
     position: absolute;
-    left: -40px;
-    top: 20px;
-    clip-path: polygon(50% 0, 60% 0, 40% 50%, 60% 100%, 50% 100%, 28% 50%);
+    left: -20px;
+    top: 44px;
+    transform: rotate(-65deg);
 }
-.MobileList button::after{
-    content: '';
-    width: 30px;
-    height: 20px;
-    background: #fff;
-    position: absolute;
-    left: 0px;
-    bottom: 10px;
-}
+
 .HomeSpan{
     width: calc(100%-50px);
     height: 5px;

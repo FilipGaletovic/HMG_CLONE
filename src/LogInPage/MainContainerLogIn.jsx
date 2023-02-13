@@ -35,8 +35,10 @@ const MainContainerLogIn = () => {
         setPassword('');
         validate(user, password)
         registerJSON.find(id => id.username == user && id.password == password ? setSuccess(true) : setSuccess(false))
-        registerJSON.find(id => id.username == user ? setUsernameContext(user): setUsernameContext(''))
-        registerJSON.find(ps => ps.password == password ? setPasswordContext(password) : setPasswordContext(''))
+        registerJSON.find(id => id.username !== user  || id.password !== password ? 
+            document.getElementById('TitleId').classList.add('errorMessage'):
+            document.getElementById('TitleId').classList.remove('errorMessage'))
+        
         }
 
 
@@ -63,10 +65,10 @@ const MainContainerLogIn = () => {
         <div className='Container'>
             <div className="welcomeText">
                 <h1>WELCOME TO HMG</h1>
-                <p>Please Log In to make your experience is faster and easier at checkout </p>
+                <p>Please Log In to make your experience faster and easier at checkout </p>
             </div>
             <div className='ContentContainer'>
-                <h2 id='TitleId'>Log In</h2>
+                <h2 className='ContainerTitle' id='TitleId'>Log In</h2>
 
                 {success ? (
                     <div className='LogInForm'>
@@ -106,7 +108,7 @@ const MainContainerLogIn = () => {
                         />
                     </form>
 
-                    <button onClick={handleSubmit} className='LogBtn'>Log In</button>
+                    <button onClick={handleSubmit} className='LogBtn' id='btnSubmitId'>Log In</button>
 
                     <p>
                         Don't Have An Account?

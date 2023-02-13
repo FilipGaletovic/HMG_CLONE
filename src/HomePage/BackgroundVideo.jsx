@@ -1,7 +1,7 @@
 import React from 'react'
 import { Logo, NavBar, HeaderText, HeaderButton } from './componentExport'
 import video1 from '../assets/Videos/BackgroundVideo.mp4'
-import '../CSS/BackgroundVideo.css'
+import '../CSS/HomeCSS/BackgroundVideo.css'
 
 const BackgroundVideo = () => {
   return (

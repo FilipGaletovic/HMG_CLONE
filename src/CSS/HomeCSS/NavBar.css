@@ -1,7 +1,7 @@
 .navBar{
     height: 50px;
     z-index: 99;
-    margin-top: 50px;
+    margin-top: -100px;
     margin-right: -300px;
     margin-left: 20px;
     position: fixed;
@@ -299,7 +299,7 @@
       min-height: 100vh;
       visibility: visible;
       display: block;
-      background-color: var(--blue-main-transp-light);
+      background-color: var(--blue-main);
       z-index: 98;  
       padding-top: 120px;
       transition-duration: 0.5s;

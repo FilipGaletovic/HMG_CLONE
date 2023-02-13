@@ -1,9 +1,24 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import '../CSS/MobileNav.css'
+import '../CSS/HomeCSS/MobileNav.css'
+const LOCAL_STORAGE_KEY_LOGIN = 'LoginForm'
 
 const MobileNav = () => {
+
+  const [myAccountText, setMyAccountText] = useState('');
+  const [LoginLink, setLoginLink] = useState('/Login');
+  
+  const registerJSON = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_LOGIN))
+
+  useEffect(() => {
+    if(registerJSON !== null){
+    registerJSON.find(id => id.username !== '' ? setMyAccountText('My Account'): setMyAccountText('Log In'));
+    setLoginLink('/my-account')
+  }
+    else setMyAccountText('Log In')
+  }, [])
+
   return (
     
     
@@ -48,7 +63,7 @@ const MobileNav = () => {
         </button>
         <span className='HomeSpan'></span>
         <button className='btnMobileList'>
-            <Link to='/Login'>Log In</Link>
+            <Link to={LoginLink}>{myAccountText}</Link>
         </button>
         <span className='HomeSpan'></span>
 

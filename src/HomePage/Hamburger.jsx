@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CSS/MobileNav.css'
+import '../CSS/HomeCSS/MobileNav.css'
 
 const Hamburger = () => {
 

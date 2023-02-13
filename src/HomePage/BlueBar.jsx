@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CSS/BackgroundVideo.css'
+import '../CSS/HomeCSS/BackgroundVideo.css'
 
 const BlueBar = () => {
   return (
