@@ -48,4 +48,7 @@
     width: 500px;
     box-shadow: 20px 20px 20px  #00000049;
 }
-
+.Logo_container{
+    margin-top: -70px;
+    margin-left: -550px;
+}

@@ -1,0 +1,120 @@
+.first-p-image{
+    width: 433px;
+    height: 400px;
+    position: relative;
+    background: var(--ultra-light-gray);
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.034);
+    border-radius: 5px 5px 0 0 ;
+    transition-duration: .3s;
+}
+.first-p-image>img{
+    border-radius: 5px 5px 0 0 ;
+}
+.first-p-image:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.158);
+    background: var(--ultra-light-gray);
+}
+.first-p-serviceBtn{
+    position: absolute;
+    bottom: 10px;
+    border: none;
+    left: 16px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    width: 400px;
+    height: 45px;
+    background: var(--gray-button);
+    font-size: 1rem;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+.first-p-serviceBtn .arrowUp{
+    position:absolute;
+    width: 0px;
+    height: 0px;
+    right: 170px;
+    top: -19px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--blue-main);
+}
+
+.first-p-serviceBtn:hover{
+    background: var(--blue-main);
+    color: #fff;
+}
+
+@media (max-width: 1650px) {
+    .first-p-image{
+        width: 370px;
+        height: 355px;
+    }
+    .first-p-image>img{
+        width: 100%;
+    }
+    .first-p-serviceBtn{
+        width: 350px;
+        left: 10px;
+    }
+    .first-p-serviceBtn .arrowUp{
+      right: 155px;
+    }
+}
+@media (max-width: 1000px) {
+    .first-p-image{
+        margin-left: 30%;
+        margin-top: 60px;
+    }
+}
+@media (max-width: 600px) {
+    .first-p-image{
+        margin-left: 130px;
+        width: 300px;
+        height: 290px;
+    }
+    .first-p-image>img{
+        width: 100%;
+    }
+    .first-p-serviceBtn{
+        width: 250px;
+        left: 25px;
+        font-size: .9rem;
+        height: 30px;
+        bottom: 15px;
+    }
+    
+    .first-p-serviceBtn .arrowUp{
+        right: 110px;
+        top: -15px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid var(--blue-main);
+    }
+    
+}
+@media (max-width: 500px){
+    .first-p-image{
+        margin-left: 60px;
+    }
+}
+@media (max-width: 400px){
+    .first-p-image{
+        margin-left: 65px;
+        width: 250px;
+        height: 240px;
+    }
+    .first-p-serviceBtn{
+        width: 220px;
+        left: 15px;
+        bottom: 10px;
+        height: 25px;
+        font-size: .8rem;
+    }
+    .first-p-serviceBtn .arrowUp{
+        left: 90px;
+    }
+
+
+}

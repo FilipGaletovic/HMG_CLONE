@@ -8,7 +8,7 @@ const Logo = () => {
     <div className='logo-container'>
         <NavLink to='/Home'><img src ={LogoIMG}  alt="" className='logoImg'/></NavLink>
         
-       
+      
     </div>
   )
 }

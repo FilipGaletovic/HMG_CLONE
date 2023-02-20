@@ -1,3 +1,8 @@
+
+html, body{
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 200px;
+}
 .TextArea{
     position: absolute;
     justify-content: center;
@@ -9,7 +14,8 @@
 
 }
 .TextArea h1{
-    font-size: 6.2rem;
+    width: auto;
+    font-size: 4rem;
     font-weight: 1000;
     color: #fff;
     position: relative;
@@ -18,15 +24,15 @@
 .TextArea h1::after{
     content: '';
     position: absolute;
-    width: 890px;
-    left: 0;
+    width: 590px;
+    left: 180px;
     bottom: 0;
-    height: 10px;
+    height: 7px;
     background: yellow;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 .TextArea p{
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #fff;
     margin-right: 20px;
     text-align: center;
@@ -35,20 +41,7 @@
 
 @media (max-width: 1750px) {
     .TextArea h1{
-        font-size: 5rem;
-    }
-    .TextArea p{
-        font-size: 1.15rem;
-    }
-    .TextArea h1::after{
-        width: 700px;
-        left: 50px;
-    }
-    
-}
-@media (max-width: 1400px) {
-    .TextArea h1{
-        font-size: 4.5rem;
+        font-size:3.5rem;
     }
     .TextArea p{
         font-size: .9rem;
@@ -56,34 +49,47 @@
     .TextArea h1::after{
         width: 550px;
         height: 7px;
-        left: 50px;
+        left: 120px;
+    }
+    
+}
+@media (max-width: 1400px) {
+    .TextArea h1{
+        font-size: 3rem;
+    }
+    .TextArea p{
+        font-size: .85rem;
+    }
+    .TextArea h1::after{
+        width: 450px;
+        height: 5px;
+        left: 100px;
     }
     
 }
 @media (max-width: 1150px) {
     .TextArea h1{
-        font-size: 3.5rem;
+        font-size: 2.7rem;
     }
     .TextArea p{
-        font-size: .8rem;
+        font-size: .75rem;
     }
     .TextArea h1::after{
-        width: 500px;
-        left: 30px;
+        width: 400px;
+        left: 70px;
         height: 5px;
     }
     
 }
 @media (max-width: 900px) {
     .TextArea h1::after{
-        left: -20px;
+        left: 30px;
     }
 }
 @media (max-width: 850px) {
     .TextArea h1::after{
         left: 50px;
-        top: 130px;
-        width: 300px;
+        width: 250px;
     }
 }
 @media (max-width: 700px) {
@@ -102,15 +108,15 @@
 }
 @media (max-width: 500px) {
     .TextArea h1::after{
-        left: -20px;
-        width: 250px;
+        left: 20px;
+        width: 200px;
         height: 4px;
         top: 115px;
     }
 }
 @media (max-width: 387px) {
     .TextArea h1::after{
-        left: 0px;
+        left: -10px;
         width: 200px;
         height: 4px;
         top: 175px;
@@ -123,7 +129,7 @@
     width: 30px;
     height: 60px;
     background: transparent;
-    top: 90%;
+    top: 80%;
     left: 49%;
     outline: none;
     cursor: pointer;

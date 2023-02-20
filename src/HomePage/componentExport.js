@@ -7,9 +7,9 @@ import Footer from "./Footer";
 import ProductButton from "./ProductButton";
 import BackgroundVideo from "./BackgroundVideo";
 import HeaderText from "./HeaderText";
-import SectionTwo from "./SectionTwo";
+import SectionThree from "./SectionThree";
 import BlueBar from './BlueBar';
-import Section3 from "./SectionTwo";
+import Section3 from "./SectionThree";
 import HeaderButton from "./HeaderButton";
 import MobileNav from "./MobileNav";
 import Hamburger from "./Hamburger";
@@ -26,7 +26,7 @@ export {
     ProductButton,
     BackgroundVideo,
     HeaderText,
-    SectionTwo,
+    SectionThree,
     BlueBar,
     Section3,
     HeaderButton,

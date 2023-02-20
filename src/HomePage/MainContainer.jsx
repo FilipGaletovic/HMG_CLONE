@@ -2,11 +2,13 @@ import React from 'react'
 import Aos from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css'
-import { ProductInfo, SectionTwo} from './componentExport'
+import { ProductInfo, SectionThree} from './componentExport'
 import Product1 from '../assets/Product1.jpg'
 import Product2 from '../assets/Product2.jpg'
 import Product3 from '../assets/Product3.jpg'
 import first_p_image from '../assets/first-p-image.png'
+import section_one_image from '../assets/section-one-image.jpg'
+import section_two_image from '../assets/section-two-image.jpg'
 import '../CSS/HomeCSS/MainContainer.css'
 
 
@@ -35,8 +37,8 @@ const MainContainer = () => {
         <section className='section-one'>
         
             <div className='Container-One'>
-                
-                <div className='first-p'>
+                <div className="section-one__p_container">
+                <div className='first-p' data-aos="fade-right" data-aos-once="true">
                     <h2>Quality-Precision-Authentic</h2>
                     <p className='first-p1'>Lorem ipsum dolor sit amet consectetur, 
                         adipisicing elit. Minus quos ullam explicabo sed
@@ -48,24 +50,38 @@ const MainContainer = () => {
                          pariatur qui soluta. Adipisci qui voluptas maiores.</p>
                          
                 </div>
-
-                <div className='first-p-image' >
-                    <img src={first_p_image} alt="" />
-                    <button className='first-p-serviceBtn'>Sign Up For Our Service
-                        <div className='arrowUp'></div>
-                    </button>
                 </div>
+
+            <span className='section-one__underline'></span>
+                <div className='section-one__image'>
+                    <img src={section_one_image} alt="" data-aos="fade" data-aos-once="true"/>
+                </div>
+            
             </div>
             </section>
 
 
-            <section className='section-two'>
+            <div className="scroll-bar" id='progress'>
+
+            </div>
+
+            <section className="section-two" id='section-two_id'>
+                <img src={section_two_image} alt="" data-aos="fade" data-aos-once="true"/>
+                <div className="section-two__text" data-aos="fade-left" data-aos-once="true">
+                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus,</h3> <br /> <br /><p> numquam accusantium perferendis repellat quos soluta qui totam consectetur natus magni tempora unde quibusdam, amet distinctio quis nostrum praesentium facilis veritatis consequuntur. Placeat libero nam in. Laborum, repudiandae. Beatae tenetur iste error doloribus sequi repellat, rem laboriosam optio exercitationem sed obcaecati hic doloremque voluptatem dolores, ullam quo itaque suscipit quod quam id fugiat quasi recusandae odio? Id commodi, </p>
+
+                    <button className='section-two__button'>Order here</button>
+                </div>
             </section>
-           
-            <SectionTwo />
+
 
             <section className='section-three'>
-                <div className='Container-Three'>
+            </section>
+           
+            <SectionThree />
+
+            <section className='section-four'>
+                <div className='Container-Four'>
                 <div className='second-p'>
                     <h2>Pre-Modified Products</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, 
@@ -76,6 +92,8 @@ const MainContainer = () => {
                           adipisicing elit. Accusamus facilis illum at blanditiis, minus, 
                          temporibus error eius eveniet ut optio enim repellat maiores 
                          pariatur qui soluta. Adipisci qui voluptas maiores.</p>
+
+                        
                          
                 </div>
                 <div className='product-list'>

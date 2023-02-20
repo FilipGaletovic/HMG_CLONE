@@ -1,6 +1,7 @@
 import React from 'react'
 import { Logo, NavBar, HeaderText, HeaderButton } from './componentExport'
 import video1 from '../assets/Videos/BackgroundVideo.mp4'
+import backgroundImage from '../assets/header_background.jpg'
 import '../CSS/HomeCSS/BackgroundVideo.css'
 
 const BackgroundVideo = () => {
@@ -11,12 +12,13 @@ const BackgroundVideo = () => {
       <div className="Content">
             <Logo />
             <NavBar />
-            
+             
     </div>
     <HeaderText />
     <HeaderButton />
-        <video src={video1} autoPlay loop muted/>
+        <img src={backgroundImage} alt="" />
         
+   
         
     </div>
     </>

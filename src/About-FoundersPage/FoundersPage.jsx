@@ -18,7 +18,9 @@ const AboutPage = () => {
     <div className="Container-about">
 
         <div className="Logo-about">
+            <div className="Logo_container">
             <Logo />
+            </div>
             <NavBar />
         </div>
         <div className="content-container">

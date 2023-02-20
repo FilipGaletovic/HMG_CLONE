@@ -5,7 +5,7 @@ import { useState, useContext, useRef, useEffect } from 'react'
 import {useInView} from 'react-intersection-observer'
 import {Link} from 'react-router-dom'
 import {navBar, SubMenuAbout, SubMenuProducts, SubMenuService} from '../constants/index'
-import { MobileNav } from './componentExport';
+import { MobileNav, Logo } from './componentExport';
 const LOCAL_STORAGE_KEY_LOGIN = 'LoginForm'
 const NavBar = () => {
 
@@ -15,11 +15,23 @@ const NavBar = () => {
     
     window.onscroll = function (e) {
       var nav_div = document.getElementById('navbar');
+      var contentProduct_invisible = document.getElementById('subnav__contnentProduct__Invisible');
+      var contentService_invisible = document.getElementById('subnav__contnentService__Invisible');
+      var contentAbout_invisible = document.getElementById('subnav__contnentAbout__Invisible');
       var invisible = nav_div.offsetTop;
       if(window.pageYOffset > invisible) {
         nav_div.classList.add('navInvisible')
-      }else nav_div .classList.remove('navInvisible')
-      
+        contentProduct_invisible.classList.remove('contentProduct')
+        contentProduct_invisible.classList.add('content__product__invisible')
+        contentService_invisible.classList.add('content__service__invisible')
+        contentAbout_invisible.classList.add('content__about__invisible')
+      }else{ 
+        contentProduct_invisible.classList.add('contentProduct')
+        nav_div .classList.remove('navInvisible')
+        contentProduct_invisible.classList.remove('content__product__invisible')
+        contentService_invisible.classList.remove('content__service__invisible')
+        contentAbout_invisible.classList.remove('content__about__invisible')
+    }
     }
 
 
@@ -48,11 +60,14 @@ const NavBar = () => {
     <>
    
     <div className='navBar' id='navbar' ref={navRef}>
+      <div className="navLogo__invisible">
+        <Logo />
+      </div>
       <Link to='/' className='navHome'>Home</Link>
       <span className='HomeSpan'></span>
       <div className="subNav">
         <button className='subNavBtn-products'>Products</button>
-        <div className="subNav-content contentProduct">
+        <div className="subNav-content contentProduct" id='subnav__contnentProduct__Invisible'>
           <Link to='/'>Product1</Link>
           <span className='subSpan'></span>
           <Link to='/'>Product2</Link>
@@ -63,7 +78,7 @@ const NavBar = () => {
       </div>
       <div className="subNav">
         <button className='subNavBtn'>Service</button>
-        <div className="subNav-content contentService">
+        <div className="subNav-content contentService" id='subnav__contnentService__Invisible'>
           <Link to='/'>AutoCad deisigns</Link>
           <span className='subSpan'></span>
           <Link to='/'>Third-party purchase</Link>
@@ -75,7 +90,7 @@ const NavBar = () => {
       </div>
       <div className="subNav">
         <button className='subNavBtn'>About</button>
-        <div className="subNav-content contentAbout">
+        <div className="subNav-content contentAbout" id='subnav__contnentAbout__Invisible'>
           <Link to='/About'>Founders</Link>
           <span className='subSpan'></span>
           <Link to='/'>Payment Options</Link>
@@ -84,9 +99,10 @@ const NavBar = () => {
           <span className='subSpan'></span>
         </div>
       </div>
-      <Link to='/Login' className='btnLink'>
+      <Link to='/Contact-us' className='btnLink'>
         <button className='contactBtn'>Contact Us</button>
       </Link>
+      
          
       <Link to={LoginLink} className='btnLink'>
         <button className='loginBtn' id='logBtn'>{myAccountText}</button>
