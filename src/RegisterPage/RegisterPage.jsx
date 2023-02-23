@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {Footer, Logo, NavBar} from '../HomePage/componentExport'
 import MainContainerRegister from './MainContainerRegister'
 import LogoImg from '../assets/HMG LOGO.png'
+import '../CSS/HomeCSS/NavBar.css'
 
 const RegisterPage = () => {
   return (

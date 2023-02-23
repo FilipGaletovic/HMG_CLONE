@@ -1,0 +1,195 @@
+.paymentNav{
+    position: absolute;
+    left: -550px;
+}
+.paymentContainer__main{
+    min-height: 600px;
+    background: url(../../assets/Blue_backgorund1.jpg) no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.paymentContainer__main > h2{
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-left: 21px;
+    width: 930px;
+    height: 50px;
+    border-bottom: 1px solid var(--blue-main);
+    background: #fff;
+    color: var(--blue-main);
+}
+
+.paymentContainer__grid{
+    height: 100%;
+    transform-origin: top;
+    display: grid;
+    grid-template-rows: repeat(3, 80px);
+    width: 50%;
+    background: #fff;
+}
+
+.paymentContainer__grid .payment_section{
+    align-items: center;
+    border-top: 1px solid var(--blue-main);
+    border-bottom: 1px solid var(--blue-main);
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    animation: slideDown 1s ease;
+    transition: margin 700ms;
+}
+.payment_section_two{
+    margin-top: 370px;
+}
+
+.payment_section_three{
+    margin-top: 370px;
+}
+.paymentContainer__grid div > img{
+    width: 200px;
+}
+
+.payment_section > div{
+    display: flex;
+    margin-left: -150px;
+    cursor: pointer;
+}
+.payment_section > div > input{
+    margin-right: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.saveContainer{
+    width: 50%;
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid var(--blue-main);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 40%, 95% 100%, 0% 100%);
+}
+.saveContainer .payment_btnSave{
+    position: absolute;
+    right: 0;
+    width: 150px;
+    padding-right: 20px;
+    border: none;
+    outline: none;
+    background: var(--blue-main-light);
+    color: #fff;
+    font-size: .9rem;
+    cursor: pointer;
+    height: 60px;
+    font-weight: 700;
+    font-family: inherit;
+}
+.paypalForm{
+    position: absolute;
+    scale: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms;
+}
+.CreditCardForm{
+    position: absolute;
+    top: 37%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1000ms;
+}
+.CreditCardForm>h3{
+    padding-right: 200px;
+    position: relative;
+}
+.CreditCardForm>h3::after{
+    content: 'CREDIT CARD';
+    position: absolute;
+    top: 75px;
+    z-index: 100;
+    color: #fff;
+    left: 60px;
+}
+.CreditCardLayout{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 110px 60px 40px 60px;
+    background: var(--blue-main);
+    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 90% 100%, 0% 100%);
+}
+.CreditCardLayout::after{
+    content: '';
+    background: var(--blue-main-light);
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    opacity: .5;
+    left: -100px;
+}
+.CreditCardLayout::before{
+    content: '';
+    background: var(--blue-main-light);
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    top: -300px;
+    opacity: .6;
+    left: -50px;
+}
+.CreditCardLayout .grid-one{
+    display: grid;
+    row-gap: 10px;
+}
+.CreditCardLayout input{
+    outline: none;
+    border: 2px solid rgba(102, 102, 102, 0.493);
+    height: 20px;
+    padding-left: 20px;
+}
+.CreditCardLayout label{
+    font-size: .8rem;
+    color: #fff;
+    font-weight: 700;
+}
+.CreditCardLayout .input_credit_two{
+    width: 220px;
+    margin-right: 80px;
+}
+.grid-one .credit_number_flex input{
+    width: 30px;
+    padding: 0 10px;
+}
+.grid-one .credit_number_flex{
+    display: flex;
+    gap: 10px;
+}
+.CreditCardLayout input:focus{
+    outline: none;
+    border: 2px solid rgb(152, 158, 238);
+    box-shadow: 0 0 5px var(--blue-main);
+}
+.CreditCardLayout div{
+    display: grid;
+    row-gap: 10px;
+}
+.CreditCardLayout div> input{
+    width: 100px;
+}
+.creditImg{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 200px;
+}
+
+
+
+

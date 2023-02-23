@@ -6,38 +6,34 @@ import {useInView} from 'react-intersection-observer'
 import {Link} from 'react-router-dom'
 import {navBar, SubMenuAbout, SubMenuProducts, SubMenuService} from '../constants/index'
 import { MobileNav, Logo } from './componentExport';
-import { transform } from 'framer-motion'
 const LOCAL_STORAGE_KEY_LOGIN = 'LoginForm'
-
-
 const NavBar = () => {
-  
-  const {ref: navRef, inView: navVisible } = useInView()
-  const [myAccountText, setMyAccountText] = useState('');
-  const [LoginLink, setLoginLink] = useState('/Login');
-  
-  
-  
-  
-  const handleNavBar = () => {
-    var nav_div = document.getElementById('navbar');
-    var contentProduct_invisible = document.getElementById('subnav__contnentProduct__Invisible');
-    var contentService_invisible = document.getElementById('subnav__contnentService__Invisible');
-    var contentAbout_invisible = document.getElementById('subnav__contnentAbout__Invisible');
-    var invisible = nav_div.offsetTop;
+
+  	const {ref: navRef, inView: navVisible } = useInView()
+    const [myAccountText, setMyAccountText] = useState('');
+    const [LoginLink, setLoginLink] = useState('/Login');
     
+    window.onscroll = function (e) {
+      var nav_div = document.getElementById('navbar');
+      var contentProduct_invisible = document.getElementById('subnav__contnentProduct__Invisible');
+      var contentService_invisible = document.getElementById('subnav__contnentService__Invisible');
+      var contentAbout_invisible = document.getElementById('subnav__contnentAbout__Invisible');
+      var invisible = nav_div.offsetTop;
+      if(window.pageYOffset > invisible) {
         nav_div.classList.add('navInvisible')
-        nav_div.style.transition = 'none'
         contentProduct_invisible.classList.remove('contentProduct')
         contentProduct_invisible.classList.add('content__product__invisible')
         contentService_invisible.classList.add('content__service__invisible')
         contentAbout_invisible.classList.add('content__about__invisible')
-      }
-      
-      useEffect(() => {
-        handleNavBar()
-      }, [])
-      
+      }else{ 
+        contentProduct_invisible.classList.add('contentProduct')
+        nav_div .classList.remove('navInvisible')
+        contentProduct_invisible.classList.remove('content__product__invisible')
+        contentService_invisible.classList.remove('content__service__invisible')
+        contentAbout_invisible.classList.remove('content__about__invisible')
+    }
+    }
+
 
     const hamburger = document.getElementById('hamburgerId');
     const mobileNav = document.getElementById('mobileNavId');
@@ -56,16 +52,16 @@ const NavBar = () => {
       registerJSON.find(id => id.username !== '' ? setMyAccountText('My Account'): setMyAccountText('Log In'));
       setLoginLink('/my-account')
     }
-    else setMyAccountText('Log In')
-  }, [])
+      else setMyAccountText('Log In')
+    }, [])
     
-
-
+    
   return (
     <>
-
-<div className='navBar' id='navbar' ref={navRef}>
+   
+    <div className='navBar' id='navbar' ref={navRef}>
       <div className="navLogo__invisible">
+        <Logo />
       </div>
       <Link to='/' className='navHome'>Home</Link>
       <span className='HomeSpan'></span>
@@ -127,7 +123,8 @@ const NavBar = () => {
       <div className='MobileNav' id='mobileNavId'>
         <MobileNav />
       </div>
-    
+      
+      
     </>
   )
 }

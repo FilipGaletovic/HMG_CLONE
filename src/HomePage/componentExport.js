@@ -1,4 +1,5 @@
 import NavBar from "./NavBar";
+import NavBarMain from "./NavBarMainPage";
 import Logo from "./Logo";
 import SliderMain from "./SliderMain";
 import MainContainer from "./MainContainer";
@@ -31,6 +32,7 @@ export {
     Section3,
     HeaderButton,
     MobileNav,
-    Hamburger
+    Hamburger,
+    NavBarMain
 
 }

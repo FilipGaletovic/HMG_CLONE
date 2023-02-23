@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar, Logo, Footer } from '../HomePage/componentExport'
+import { NavBarMain, Logo, Footer } from '../HomePage/componentExport'
 import '../CSS/HomeCSS/Logo.css'
 import '../CSS/FoundersCSS/MainContainerFounders.css'
 import ImageAbout from '../assets/about-image.jpg'
@@ -21,7 +21,7 @@ const AboutPage = () => {
             <div className="Logo_container">
             <Logo />
             </div>
-            <NavBar />
+            <NavBarMain />
         </div>
         <div className="content-container">
 
