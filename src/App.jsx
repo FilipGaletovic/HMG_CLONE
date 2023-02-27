@@ -9,6 +9,7 @@ import FoundersPage from './FoundersPage/FoundersPage';
 import PaymentPage from './PaymentPage/PaymentPage';
 import PrivacyPolicyPage from './PrivacyPolicyPage/PrivacyPolicy';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import ContactUs from './ContactPage/ContactUs';
 
  const App = () => (
     <>
@@ -22,6 +23,7 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
         <Route path='/about/Privacy-policy' element={ <PrivacyPolicyPage />}/>
         <Route path='/Login' element={<LogInPage />}/>
         <Route path='/Register' element={ <RegisterPage /> } />
+        <Route path='/Contact-us' element={ <ContactUs /> } />
       </Routes>
       </div>
       </PayPalScriptProvider>

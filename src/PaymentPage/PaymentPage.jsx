@@ -12,7 +12,15 @@ import { PayPalButtons, PayPalScriptProvider  } from '@paypal/react-paypal-js';
 const PaymentPage = () => {
 
     const [activeSection, setActiveSection] = useState(0);
-
+    const [CreditCardNumber, setCreditCardNumber] = useState();
+    const [CreditCardNumber1, setCreditCardNumber1] = useState();
+    const [CreditCardNumber2, setCreditCardNumber2] = useState();
+    const [CreditCardNumber3, setCreditCardNumber3] = useState();
+    const [CreditCardNumber4, setCreditCardNumber4] = useState();
+    const [CreditCardName, setCreditCardName] = useState();
+    const [CreditCardCVV, setCreditCardCVV] = useState();
+    const [CreditCardDate, setCreditCardDate] = useState();
+    
 
     const paymentContainer = document.getElementById('paymentContainerId')
     const payment_section_one = document.getElementById('paymentSectionOneId')
@@ -23,6 +31,7 @@ const PaymentPage = () => {
     const paypalRadio = document.getElementById('paypalRadioId')
     const creditRadio = document.getElementById('creditRadioId')
     const debitRadio = document.getElementById('debitRadioId')
+    const SaveChangesBtn = document.getElementById('payment_btnSave_Id')
 
    
     
@@ -70,6 +79,27 @@ const PaymentPage = () => {
             Object.assign(CreditCardForm.style, Form_style_hidden)
             break;
     }
+    
+
+    
+    const handleBtnSave = () => {
+        if(CreditCardNumber1 || CreditCardNumber2 || CreditCardNumber3 || CreditCardNumber4)
+        setCreditCardNumber(CreditCardNumber1.toString() + 
+        CreditCardNumber2.toString() + CreditCardNumber3.toString()
+        + CreditCardNumber4.toString())
+        else return;
+
+
+        if(CreditCardNumber < 1000000000000000){
+            console.log("rorrw")
+        }
+    } 
+
+    const CardNumberRef = useRef();
+
+    useEffect(() => {
+        CardNumberRef.current.focus();
+    }, [activeSection])
 
    
   return (
@@ -95,26 +125,58 @@ const PaymentPage = () => {
                 <i className='grid-one'>
                 <label>Card number</label>
                 <div className='credit_number_flex'>
-                    <input type='text' className='input_credit_number'/>
-                    <input type='text' className='input_credit_number'/>
-                    <input type='text' className='input_credit_number'/>
-                    <input type='text' className='input_credit_number'/>
+                    <input type='text' 
+                           className='input_credit_number'
+                           placeholder='2345'
+                           maxLength={4}
+                           required
+                           value={CreditCardNumber1}
+                           onChange={(e) => setCreditCardNumber1(e.target.value)}
+                           ref={CardNumberRef}
+                           />
+                    <input type='text' 
+                           className='input_credit_number'
+                           placeholder='5678'
+                           pattern="^[0-9]{4}$"
+                           maxLength={4}
+                           required
+                           value={CreditCardNumber2}
+                           onChange={(e) => setCreditCardNumber2(e.target.value)}/>
+                    <input type='text' 
+                           className='input_credit_number'
+                           placeholder='3456'
+                           pattern='^[0-9]{4}$'
+                           maxLength={4}
+                           required
+                           value={CreditCardNumber3}
+                           onChange={(e) => setCreditCardNumber3(e.target.value)}/>
+                    <input type='text' 
+                           className='input_credit_number'
+                           placeholder='9786'
+                           pattern='^[0-9]{4}$'
+                           maxLength={4}
+                           requiredvalue={CreditCardNumber4}
+                           onChange={(e) => setCreditCardNumber4(e.target.value)}/>
                 </div>
                 <label>Name</label>
-                <input type='text' className='input_credit_two' />
+                <input type='text' 
+                       className='input_credit_two' 
+                       value={CreditCardName}
+                       onChange={(e) => setCreditCardName(e.target.value)}/>
                 </i>
                 <div>
                     <label>CVV</label>
-                    <input type='number' />
+                    <input type='text'
+                           placeholder='345'
+                           maxLength={3}
+                           value={CreditCardCVV}
+                           onChange={(e) => setCreditCardCVV(e.target.value)} />
                     <label>Expiry date</label>
                     <input type='date' />
                 </div>
             </layout>
         </form>
 
-       
-        
-        
             <div className="paymentContainer__grid" id='paymentContainerId'>
                 <div className="payment_section" id='paymentSectionOneId'>
                     <div className="input_one">
@@ -154,13 +216,19 @@ const PaymentPage = () => {
                 </div>
             </div>
             <div className="saveContainer">
-                <button className='payment_btnSave'>Save Changes</button>
+                <button className='payment_btnSave' 
+                        id='payment_btnSave_Id'
+                        onClick={handleBtnSave}
+                        >
+                        Save Changes
+                </button>
             </div>
         </div>
 
         <div className="paymentFooter">
             <Footer />
         </div>
+       
     </>
   )
 }

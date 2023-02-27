@@ -73,7 +73,7 @@ const MainContainerRegister = () => {
             username: username,
             password: password,
             repeatPassword: repeatPassword,
-            emal: email,
+            email: email,
             company: company,
             country: country
         }

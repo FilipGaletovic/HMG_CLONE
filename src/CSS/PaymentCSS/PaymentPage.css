@@ -171,6 +171,9 @@
     display: flex;
     gap: 10px;
 }
+.CreditCardLayout input::placeholder{
+    opacity: .5;
+}
 .CreditCardLayout input:focus{
     outline: none;
     border: 2px solid rgb(152, 158, 238);

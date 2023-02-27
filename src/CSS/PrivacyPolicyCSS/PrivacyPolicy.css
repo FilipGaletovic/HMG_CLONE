@@ -1,0 +1,43 @@
+.PP_container {
+    height: 700px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    margin-top: -100px;
+    position: relative;
+  }
+.PP_container > h1{
+  font-size: 1.7rem;
+  margin-right: 40%;
+  margin-top: 30px;
+}
+.PP_text_container {
+    width: 50%;
+    height: 570px;
+    overflow-y: scroll;
+    background: #fff;
+    padding: 10px 30px;
+    box-shadow: 0 0 50px #0000002c;
+    margin-top: 10px;
+    padding-top: 50px;
+    position: relative;
+  }
+.agree_button {
+    background: var(--blue-main);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 40px;
+    color: #fff;
+    font-weight: 700;
+    padding: 0 25px;
+    float: right;
+    margin-bottom: 50px;
+  }
+.last_p{
+  text-align: right;
+}
+  

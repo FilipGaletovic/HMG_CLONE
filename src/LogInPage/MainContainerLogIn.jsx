@@ -11,8 +11,6 @@ const MainContainerLogIn = () => {
     const [password, setPassword] = useState('');
     const [errMsg, setErrMsg] = useState(''); 
     const [success, setSuccess] = useState();
-    const [UsernameContext, setUsernameContext] = useState();
-    const [PasswordContext, setPasswordContext] = useState();
 
     const registerJSON = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_LOGIN))
 
@@ -81,7 +79,7 @@ const MainContainerLogIn = () => {
                 ) : (
                 <div className='LogInForm'>
                 <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'}
-                  aria-live='assertive'  >{errMsg}</p>
+                  aria-live='assertive'>{errMsg}</p>
                   
                     <form>
                     <label className='labele'>Username</label>
